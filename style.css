@@ -131,7 +131,7 @@ p {
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 15px 16px;
+  padding: 16px;
   margin-bottom: 18px;
   border-radius: 10px;
 }
