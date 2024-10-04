@@ -1,0 +1,219 @@
+@font-face {
+  font-family: 'HankenGrotesk';
+  src: url(assets/fonts/HankenGrotesk-VariableFont_wght.ttf) format('truetype');
+  font-display: swap;
+}
+:root {
+  /* Primary */
+
+  --lightRed: hsl(0, 100%, 67%);
+  --orangeyYellow: hsl(39, 100%, 56%);
+  --greenTeal: hsl(166, 100%, 37%);
+  --cobaltBlue: hsl(234, 85%, 45%);
+
+  /* Gradients */
+
+  --lightSlateBlueBackground: hsl(252, 100%, 67%);
+  --lightRoyalBlueBackground: hsl(241, 81%, 54%);
+
+  --violetBlueCircle: hsla(256, 72%, 46%, 1);
+  --persianBlueCircle: hsla(241, 72%, 46%, 0);
+
+  --white: hsl(0, 0%, 100%);
+  --paleBlue: hsl(221, 100%, 96%);
+  --lightLavender: hsl(241, 100%, 89%);
+  --darkGrayBlue: hsl(224, 30%, 27%);
+}
+html,
+body {
+  width: 100%;
+  height: 100%;
+}
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+body {
+  font-family: 'HankenGrotesk', sans-serif;
+  background: var(--white);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+p {
+  font-size: 1.125rem;
+  font-weight: 500;
+}
+.main-area {
+  width: 1440px;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.card {
+  width: 734px;
+  background: white;
+  border-radius: 30px;
+  display: flex;
+  box-shadow: 0 16px 40px var(--lightLavender);
+}
+
+.left-area {
+  flex-basis: 366px;
+  color: var(--lightLavender);
+  background: linear-gradient(
+    var(--lightSlateBlueBackground),
+    var(--lightRoyalBlueBackground)
+  );
+  padding: 43px;
+  border-radius: 30px;
+  border: 1px solid var(--lightRoyalBlueBackground);
+  text-align: center;
+}
+
+.left-area h3 {
+  font-size: 1.5rem;
+  line-height: 1.125rem;
+  font-weight: 500;
+  margin-bottom: 42px;
+}
+.result {
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  background: linear-gradient(
+    var(--violetBlueCircle),
+    var(--persianBlueCircle)
+  );
+  margin: 0 auto;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.result p {
+  line-height: 1.375rem;
+}
+.result h1 {
+  font-size: 4.5rem;
+  line-height: 4.5rem;
+  font-weight: 800;
+  padding: 18px 0 4px;
+  color: var(--white);
+}
+.left-area h2 {
+  font-size: 2rem;
+  color: var(--white);
+  padding: 13px;
+  margin-top: 14px;
+  font-weight: 700;
+}
+.left-area p {
+  padding: 0 10px;
+  margin-bottom: 10px;
+}
+
+.right-area {
+  flex-basis: 368px;
+  padding: 40px;
+}
+.right-area h2 {
+  line-height: 1.25rem;
+  padding-bottom: 34px;
+}
+.score {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 15px 16px;
+  margin-bottom: 18px;
+  border-radius: 10px;
+}
+.score p {
+  font-weight: 700;
+}
+.score p span {
+  color: var(--lightLavender);
+  padding-left: 4px;
+}
+.score h3 {
+  font-size: 1rem;
+  display: flex;
+  align-items: center;
+}
+.score h3 img {
+  padding-right: 13px;
+}
+.score:nth-child(2) {
+  background: hsla(0, 100%, 67%, 0.1);
+}
+.score:nth-child(2) h3 {
+  color: var(--lightRed);
+}
+.score:nth-child(3) {
+  background: hsla(39, 100%, 56%, 0.1);
+}
+.score:nth-child(3) h3 {
+  color: var(--orangeyYellow);
+}
+.score:nth-child(4) {
+  background: hsla(166, 100%, 37%, 0.1);
+}
+.score:nth-child(4) h3 {
+  color: var(--greenTeal);
+}
+.score:nth-child(5) {
+  background: hsla(234, 85%, 45%, 0.1);
+}
+.score:nth-child(5) h3 {
+  color: var(--cobaltBlue);
+}
+
+.right-area button {
+  display: block;
+  font-size: 1rem;
+  font-weight: 700;
+  width: 100%;
+  padding: 17.5px;
+  border: none;
+  border-radius: 30px;
+  color: var(--white);
+  background: var(--darkGrayBlue);
+  margin-top: 40px;
+  cursor: pointer;
+}
+
+.right-area button:active,
+.right-area button:hover {
+  background: linear-gradient(
+    var(--lightSlateBlueBackground),
+    var(--lightRoyalBlueBackground)
+  );
+}
+
+@media (max-width: 450px) {
+  .main-area {
+    display: block;
+    max-width: 450px;
+    height: 100%;
+  }
+  .card {
+    width: 375px;
+    height: auto;
+    flex-direction: column;
+    border-radius: 0;
+    margin: 0 auto;
+  }
+  .card p {
+    letter-spacing: 0;
+  }
+  .left-area {
+    border-radius: 0 0 30px 30px;
+  }
+}
